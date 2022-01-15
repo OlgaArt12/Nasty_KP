@@ -1,0 +1,39 @@
+﻿@model Uspevaemost.Models.Academgroup
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Удаление</h1>
+
+<h3>Вы точно хотите удалить это?</h3>
+<div>
+    <h4>Academgroup</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Shifr)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Shifr)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Godpostup)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Godpostup)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Number)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Number)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="GroupId" />
+        <input type="submit" value="Удалить" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

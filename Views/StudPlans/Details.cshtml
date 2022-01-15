@@ -1,0 +1,42 @@
+﻿@model Uspevaemost.Models.StudPlan
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>StudPlan</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Clock)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Clock)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Attestation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Attestation)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdGroupNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdGroupNavigation.GroupId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NameSubjectNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NameSubjectNavigation.NameSubject)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.PlanId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

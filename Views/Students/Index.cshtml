@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Uspevaemost.Models.Student>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Добавить студента</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Zachetka)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateStud)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdgroupNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Zachetka)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateStud)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdgroupNavigation.GroupId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ZachetkaId">Редактировать</a> |
+                <a asp-action="Details" asp-route-id="@item.ZachetkaId">Информация</a> |
+                <a asp-action="Delete" asp-route-id="@item.ZachetkaId">Удалить</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

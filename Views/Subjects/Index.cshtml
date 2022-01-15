@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Uspevaemost.Models.Subject>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Добавить</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NameSubject)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fioprepod)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NameSubject)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fioprepod)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdnameSubject">Редактировать</a> |
+                <a asp-action="Details" asp-route-id="@item.IdnameSubject">Информация</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdnameSubject">Удалить</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

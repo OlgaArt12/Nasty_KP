@@ -1,0 +1,48 @@
+﻿@model Uspevaemost.Models.Student
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Информация о студенте</h1>
+
+<div>
+    <h4>Student</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Zachetka)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Zachetka)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Fio)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Fio)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DateStud)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DateStud)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IdgroupNavigation)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IdgroupNavigation.Shifr)
+        </dd>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IdgroupNavigation.Godpostup)
+        </dd>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IdgroupNavigation.Number)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ZachetkaId">Изменить</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
