@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Uspevaemost.Models.ZaprosTwo>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Должники:</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Shifr)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Godpostup)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NameSubject)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mark)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Debtor)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Shifr)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Godpostup)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NameSubject)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mark)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Debtor)
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
